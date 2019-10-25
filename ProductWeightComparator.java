@@ -4,7 +4,7 @@ import java.util.Comparator;
 
 /**
  *
- * @author suprina
+ * @author I.M.Bad
  * 
  * This is used when we need to sort by product weight descending
  */

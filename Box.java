@@ -2,25 +2,20 @@ package packer;
 
 /**
  *
- * @author suprina
+ * @author I.M.Bad
  */
-
 public class Box {
     
     
-    private Manifest contents; //using for contents
-    private Customer customer; //using for customers
-    private Depot depot;  //using fordepot
+    private Manifest contents;
+    private Customer customer;
+    private Depot depot; 
 
-    
-    // public to 
-    Box(Customer customer, Depot depot) {
+    public Box(Customer customer, Depot depot) {
         this.customer = customer;
         this.depot = depot;
         contents = new Manifest();
     }
-
- 
     
     public void addProduct(Product product) {
         if (canFit(product)) {
@@ -53,27 +48,27 @@ public class Box {
     public String toString() {
         return getLabel();
     }
-    //creating getweight method of manifest
+    
     public double getWeight() {
         return contents.getWeight();
     }
     
-       //     public void addProduct(Product product) {
-       //         if (canFit(product)) {
-       //             contents.addProduct(product, 1);
-       //         }
-        //    }
+    public void addProduct(Product product) {
+        if (canFit(product)) {
+            contents.addProduct(product, 1);
+        }
+    }
     
     public boolean canFit(Product p) {
-        return p.getWeight() < 20;
+        return p.getWeight() < 40;
     }
     
     public boolean canFit(Product p, int quantity) {
-        return (p.getWeight() * quantity) < 20; //quantity less then 20
+        return (p.getWeight() * quantity) < 40;
     }
     
     public double remainingCapacity() {
-        return 20 - this.getWeight();
+        return 40 - this.getWeight();
     }
     
     public boolean isFragile() {
@@ -84,4 +79,3 @@ public class Box {
         return false;
     }
 }
-

@@ -7,7 +7,7 @@ import java.util.TreeSet;
 
 /**
  *
- * @author suprina
+ * @author I.M.Bad
  */
 public class Manifest {
     
@@ -41,9 +41,9 @@ public class Manifest {
         if (quantities.containsKey(p) && quantities.get(p) > 0) {
             quantities.put(p,quantities.get(p)-1);
         }
-        //if (quantities.get(p) == 0) {
-          //  quantities.remove(p);
-        //}
+        if (quantities.get(p) == 0) {
+            quantities.remove(p);
+        }
         if (quantities.containsKey(p)) {
             byWeight.remove(p);
         }
@@ -93,13 +93,5 @@ public class Manifest {
         }
         return false;
     }
-        double getWeight() {
-     double weight = 0;
-        for (Product p : quantities.keySet()) {
-            weight = quantities.get(p) * p.getWeight();
-        }
-        return weight;
-    }
     
-}
 

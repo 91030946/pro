@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  *
- * @author suprina
+ * @author I.M.Bad
  */
 public class Customer {
     
@@ -33,7 +33,6 @@ public class Customer {
             double distance = a.getCoordinates().companyDistanceTo(d.getCoordinates());
             if (distance < bestDistance) {
                 bestAddress = a;
-                bestDistance = distance;
             }
         }
         return bestAddress;

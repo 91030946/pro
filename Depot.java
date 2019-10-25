@@ -2,7 +2,7 @@ package packer;
 
 /**
  *
- * @author suprina
+ * @author I.M.Bad
  */
 public class Depot {
     private String name;
