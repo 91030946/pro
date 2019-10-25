@@ -2,7 +2,7 @@ package packer;
 
 /**
  *
- * @author suprina
+ * @author I.M.Bad
  */
 public class Product {
 
@@ -36,7 +36,7 @@ public class Product {
      * @return the hazardous
      */
     public boolean isHazardous() {
-        return hazardous;
+        return false;
     }
 
     /**
